@@ -1,9 +1,9 @@
-import { Tasks } from "./pages/Tasks/Tasks"
+import { Home } from "./pages/Home/Home"
 
 export const App = () => {
   return (
     <div>
-      <Tasks/>
+      <Home/>
     </div>
   )
 }

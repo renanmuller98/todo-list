@@ -1,0 +1,53 @@
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .task {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+
+        border: 1px solid #262626;
+        background: #333333;
+        border-radius: 8px;
+        margin-top: 10px;
+        padding: 2px 20px 2px 20px;
+
+        input[type="checkbox"] {
+            appearance: none;
+
+            width: 40px;
+            height: 1.6rem;
+            border-radius: 15px;
+            border: 2px solid #4EA8DE;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"]:checked::before {
+            content: url(../../assets/svg/check.svg);
+            display: flex;
+            border-radius: 9px;
+            padding-left: 1px;
+        }
+
+        p {
+            color: #c7c7c7;
+            padding: 20px;
+        }
+
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+
+            i {
+                font-size: 1rem;
+            }
+        }
+    }
+}
