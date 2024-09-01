@@ -3,12 +3,18 @@ const router = require('./routes/taskRoutes')
 const app = express()
 const mongoose = require('mongoose')
 
+require('dotenv').config();
+
 app.use(express.json())
 
 app.use('/api', router)
 
-mongoose.connect(`mongodb+srv://renanmullercarmo:teste123@cluster0.frchc.mongodb.net/`)
+dbUser = process.env.DB_USER
+dbPassword = process.env.DB_PASSWORD
+port = process.env.PORT
 
-app.listen(3333, () => {
+mongoose.connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0.frchc.mongodb.net/`)
+
+app.listen(port || 3333, () => {
     console.log('Servidor iniciado')
 })
